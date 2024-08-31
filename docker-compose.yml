@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  redis:
+    image: "redis:alpine"
+    container_name: stock_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis:/data
+
+  web:
+    build: ./backend
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+
+  frontend:
+    build: ./frontend
+    command: npm start
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - web
