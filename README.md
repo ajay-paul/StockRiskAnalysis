@@ -12,6 +12,7 @@ This project implements a deep learning approach to stock prediction for the Ind
   - [CNN Model](#cnn-model)
   - [Transformer Model](#transformer-model)
   - [Reinforcement Learning Model](#reinforcement-learning-model)
+  - [Tech Stack](#tech-stack)
 - [Evaluation](#evaluation)
 
 
@@ -55,6 +56,14 @@ Transformer models are used to capture long-term dependencies in the data by uti
 
 ### Reinforcement Learning Model
 Reinforcement Learning (RL) models are used to develop trading strategies that optimize portfolio returns by learning to make buy/sell/hold decisions.
+
+### Tech Stack
+
+- **Backend:** Django, Python, Redis, PostgreSQL
+- **Frontend:** React.js
+- **Machine Learning:** LSTM, CNN, Transformers, Reinforcement Learning
+- **Other Services:** Celery, Docker, Twilio, Zerodha Kite API
+
 
 ## Evaluation
 
