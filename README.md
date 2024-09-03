@@ -12,7 +12,7 @@ This project implements a deep learning approach to stock prediction for the Ind
   - [CNN Model](#cnn-model)
   - [Transformer Model](#transformer-model)
   - [Reinforcement Learning Model](#reinforcement-learning-model)
-  - [Tech Stack](#tech-stack)
+- [Tech Stack](#tech-stack)
 - [Evaluation](#evaluation)
 
 
