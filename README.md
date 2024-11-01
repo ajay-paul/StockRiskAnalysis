@@ -48,8 +48,6 @@ We implement and experiment with several deep learning and reinforcement learnin
 
 Long Short-Term Memory (LSTM) networks are ideal for capturing long-term dependencies in sequential data like stock prices and technical indicators.
 
-### CNN Model
-Convolutional Neural Networks (CNN) are effective at capturing local patterns in stock price movements and technical indicators.
 
 ### Transformer Model
 Transformer models are used to capture long-term dependencies in the data by utilizing attention mechanisms. They are especially useful for combining text data (such as news) with numerical data.
