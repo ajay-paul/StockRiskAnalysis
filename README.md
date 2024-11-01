@@ -59,8 +59,8 @@ Reinforcement Learning (RL) models are used to develop trading strategies that o
 
 - **Backend:** Django, Python, Redis, PostgreSQL
 - **Frontend:** React.js
-- **Machine Learning:** LSTM, CNN, Transformers, Reinforcement Learning
-- **Other Services:** Celery, Docker, Twilio, Zerodha Kite API
+- **Machine Learning:** LSTM, Transformers, Reinforcement Learning
+- **Other Services:** Celery, Docker, Socket.io, Zerodha Kite API
 
 
 ## Evaluation
