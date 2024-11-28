@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+  django_service:
+    build:
+      context: ./backend/django_service
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/django_service:/app
+    depends_on:
+      - mongo
+      - redis
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - MONGO_URI=mongodb://mongo_user:mongo_password@mongo:27017/stock_data
+
+  celery_worker:
+    build:
+      context: ./backend/django_service
+      dockerfile: Dockerfile
+    command: celery -A django_service.tasks worker --loglevel=info
+    volumes:
+      - ./backend/django_service:/app
+    depends_on:
+      - mongo
+      - redis
+    environment:
+      - CELERY_BROKER_URL=redis://redis:6379/0
+      - MONGO_URI=mongodb://mongo_user:mongo_password@mongo:27017/stock_data
+
+  mongo:
+    build:
+      context: ./backend/mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  redis:
+    build:
+      context: ./backend/redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  mongo_data:

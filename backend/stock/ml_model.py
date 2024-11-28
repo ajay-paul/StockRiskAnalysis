@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import tensorflow
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout, Conv1D, MaxPooling1D, Flatten
 from tensorflow.keras.optimizers import Adam
@@ -7,11 +8,13 @@ from sklearn.preprocessing import MinMaxScaler
 from transformers import BertTokenizer, TFBertModel
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Embedding, Dense, LayerNormalization, MultiHeadAttention
-import tensorflow as tf
 from stable_baselines3 import DQN
 from trading_env import StockTradingEnv
 from .models import StockData, StockPrediction
 
+print(tensorflow.__version__)
+model = Sequential()
+print("Sequential imported successfully.")
 
 def build_lstm_model(input_shape):
     model = Sequential()

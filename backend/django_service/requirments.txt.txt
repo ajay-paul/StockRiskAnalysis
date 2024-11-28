@@ -1,0 +1,8 @@
+django
+djangorestframework
+celery
+redis
+pymongo
+tensorflow 
+torch 
+stable-baselines3
