@@ -1,27 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Container, Box } from '@mui/material';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Dashboard from './components/Dashboard';
 
 function App() {
-    const [predictedPrice, setPredictedPrice] = useState(null);
-
-    useEffect(() => {
-        fetch('/api/predict/reliance/')
-            .then(response => response.json())
-            .then(data => setPredictedPrice(data.predicted_price));
-    }, []);
-
-    return (
-        <div className="App">
-            <h1>Stock Prediction Dashboard</h1>
-            {predictedPrice ? (
-                <div>
-                    <h2>Predicted Price for Reliance:</h2>
-                    <p>{predictedPrice}</p>
-                </div>
-            ) : (
-                <p>Loading...</p>
-            )}
-        </div>
-    );
+  return (
+    <Container maxWidth="lg">
+      <Header />
+      <Box my={4}>
+        <Dashboard />
+      </Box>
+      <Footer />
+    </Container>
+  );
 }
 
 export default App;
