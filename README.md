@@ -12,7 +12,7 @@ This project implements a deep learning approach to stock prediction for the Ind
   - [CNN Model](#cnn-model)
   - [Transformer Model](#transformer-model)
   - [Reinforcement Learning Model](#reinforcement-learning-model)
-  - [Tech Stack](#tech-stack)
+- [Tech Stack](#tech-stack)
 - [Evaluation](#evaluation)
 
 
@@ -48,8 +48,6 @@ We implement and experiment with several deep learning and reinforcement learnin
 
 Long Short-Term Memory (LSTM) networks are ideal for capturing long-term dependencies in sequential data like stock prices and technical indicators.
 
-### CNN Model
-Convolutional Neural Networks (CNN) are effective at capturing local patterns in stock price movements and technical indicators.
 
 ### Transformer Model
 Transformer models are used to capture long-term dependencies in the data by utilizing attention mechanisms. They are especially useful for combining text data (such as news) with numerical data.
@@ -61,8 +59,8 @@ Reinforcement Learning (RL) models are used to develop trading strategies that o
 
 - **Backend:** Django, Python, Redis, PostgreSQL
 - **Frontend:** React.js
-- **Machine Learning:** LSTM, CNN, Transformers, Reinforcement Learning
-- **Other Services:** Celery, Docker, Twilio, Zerodha Kite API
+- **Machine Learning:** LSTM, Transformers, Reinforcement Learning
+- **Other Services:** Celery, Docker, Socket.io, Zerodha Kite API
 
 
 ## Evaluation
